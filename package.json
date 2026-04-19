@@ -1,5 +1,5 @@
 {
-  name: jomato-server-monitor,
+  name: chomato-server-monitor,
   version: 1.0.0,
   main: index.js,
   scripts: {

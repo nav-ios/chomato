@@ -602,11 +602,11 @@ async function sendNtfyAlert(payload, selectedLocationName) {
   const hasOrderPayload = Boolean(extractedOrderId);
   const orderId = extractedOrderId ?? "unknown";
   const defaultTitle = hasOrderPayload
-    ? `Jomato (${NTFY_SERVER_LABEL}): Order Cancelled [ACTION]`
-    : `Jomato (${NTFY_SERVER_LABEL}): Order Cancelled [NO_ORDER_ID]`;
+    ? `Chomato (${NTFY_SERVER_LABEL}): Order Cancelled [ACTION]`
+    : `Chomato (${NTFY_SERVER_LABEL}): Order Cancelled [NO_ORDER_ID]`;
   const title = hasOrderPayload
-    ? "JOMATO CANCELLED - REAL ORDER (CHECK NOW)"
-    : "JOMATO CANCELLED - NO ORDER ID (LIKELY IGNORE)";
+    ? "CHOMATO CANCELLED - REAL ORDER (CHECK NOW)"
+    : "CHOMATO CANCELLED - NO ORDER ID (LIKELY IGNORE)";
   const body = NTFY_MESSAGE || `Cancelled order detected for ${selectedLocationName}. order_id=${orderId}`;
   const url = `${NTFY_BASE_URL.replace(/\/+$/g, "")}/${encodeURIComponent(NTFY_TOPIC)}`;
 
@@ -650,7 +650,7 @@ function startMonitor(foodRescue, selectedLocationName) {
 
   const mqttUrl = "mqtts://hedwig.zomato.com:443";
   const client = mqtt.connect(mqttUrl, {
-    clientId: `jomato_server_${Date.now()}`,
+    clientId: `chomato_server_${Date.now()}`,
     clean: true,
     keepalive: foodRescue.client.keepalive || 30,
     reconnectPeriod: 5000,

@@ -1,4 +1,4 @@
-# jomato
+# chomato
 
 **Instant push alerts for Zomato Food Rescue — before anyone else gets there.**
 
@@ -13,7 +13,7 @@ Food Rescue is Zomato's feature where cancelled or excess restaurant orders beco
 
 The problem: by the time you open the app and check, it's already claimed.
 
-**jomato** fixes that. It runs on a server, connects to Zomato's internal MQTT feed, and the moment a Food Rescue event fires for your address — your phone buzzes instantly via [ntfy.sh](https://ntfy.sh).
+**chomato** fixes that. It runs on a server, connects to Zomato's internal MQTT feed, and the moment a Food Rescue event fires for your address — your phone buzzes instantly via [ntfy.sh](https://ntfy.sh).
 
 ---
 
@@ -42,8 +42,8 @@ The problem: by the time you open the app and check, it's already claimed.
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/nav-ios/jomato.git
-cd jomato
+git clone https://github.com/nav-ios/chomato.git
+cd chomato
 npm install
 ```
 
@@ -60,7 +60,7 @@ Or use environment variables (recommended):
 
 ```bash
 export ZOMATO_PHONE=9999999999
-export NTFY_TOPIC=my-jomato-alerts
+export NTFY_TOPIC=my-chomato-alerts
 ```
 
 Pick any unique string for `NTFY_TOPIC` — open the ntfy app on your phone and subscribe to the same topic name.
@@ -106,7 +106,7 @@ Then add a second entry in `ecosystem.config.js` (see the commented-out template
 ## ntfy setup
 
 1. Install [ntfy](https://ntfy.sh) on your iPhone or Android
-2. Subscribe to your chosen topic (e.g. `my-jomato-alerts`)
+2. Subscribe to your chosen topic (e.g. `my-chomato-alerts`)
 3. Set the same topic in `NTFY_TOPIC`
 
 Free. No account needed. Self-hostable if you want.

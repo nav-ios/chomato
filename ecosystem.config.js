@@ -10,7 +10,7 @@
 module.exports = {
   apps: [
     {
-      name: 'jomato-monitor',
+      name: 'chomato-monitor',
       script: 'index.js',
       cwd: __dirname,
       autorestart: true,
@@ -25,7 +25,7 @@ module.exports = {
     },
     // Uncomment and duplicate for additional users:
     // {
-    //   name: 'jomato-monitor-friend',
+    //   name: 'chomato-monitor-friend',
     //   script: 'index.js',
     //   cwd: __dirname,
     //   autorestart: true,
