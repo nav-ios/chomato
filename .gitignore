@@ -1,0 +1,7 @@
+node_modules/
+state/
+state-friend/
+state-friend2/
+runtime/
+*.bak*
+.env
